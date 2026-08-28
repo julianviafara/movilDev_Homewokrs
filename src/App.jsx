@@ -4,6 +4,7 @@ import ContactForm from "./components/ContactForm";
 import ContactList from "./components/ContactList";
 import initialContacts from "./data/initialContacts";
 import "./App.css";
+import icon from "./assets/icon.jpg";
 
 //Joker inspired app xd
 
@@ -41,6 +42,9 @@ function App() {
         <main className="app-content">
           <ContactForm onAddContact={handleAddContact} />
           <ContactList contacts={contacts} onDelete={handleDeleteContact} />
+          <div className="icon-container">
+           <img src={icon} alt="icon" className="icon" />
+          </div>
         </main>
       )}
     </div>

@@ -1,0 +1,15 @@
+{
+  "name": "Joker Inspired App",
+  "short_name": "Joker App",
+  "icons": [
+    {
+      "src": "/icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#39ff14",
+  "background_color": "#150826"
+}
