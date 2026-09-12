@@ -1,0 +1,160 @@
+.deco-title {
+  font-family: var(--font-heading);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  text-align: center;
+  margin: 0;
+}
+
+.deco-subtitle {
+  font-family: var(--font-heading);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.deco-divider {
+  height: 2px;
+  margin: 1.5rem auto;
+  width: 60%;
+  background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+  position: relative;
+}
+
+.deco-divider::before {
+  content: "◆";
+  position: absolute;
+  left: 50%;
+  top: -9px;
+  transform: translateX(-50%);
+  color: var(--color-gold);
+  background: var(--color-bg);
+  padding: 0 8px;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
+}
+
+.login-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-gold);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 0 0 4px rgba(201, 162, 75, 0.15);
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.login-form input,
+.patient-form input,
+.search-bar input {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.6rem 0.75rem;
+  background: #1f1f1f;
+  border: 1px solid #3a3a3a;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.login-form input:focus,
+.patient-form input:focus,
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.7rem;
+  background: var(--color-gold);
+  color: #0d0d0d;
+  border: none;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover { background: var(--color-gold-light); }
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold-light);
+  padding: 0.4rem 1rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.btn-secondary:hover { background: rgba(201, 162, 75, 0.1); }
+
+.error-message {
+  color: var(--color-error);
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.app-container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-actions { display: flex; align-items: center; gap: 1rem; color: var(--color-text-muted); }
+
+.patient-form { background: var(--color-surface); border: 1px solid #2a2a2a; padding: 1.5rem; margin-bottom: 2rem; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+
+.form-grid label { font-size: 0.8rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.search-bar { margin-bottom: 1.5rem; }
+
+.patient-list { list-style: none; padding: 0; }
+
+.patient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid #2a2a2a;
+  border-left: 2px solid var(--color-gold);
+  background: var(--color-surface);
+  margin-bottom: 0.5rem;
+}
+
+.patient-name { font-family: var(--font-heading); color: var(--color-gold-light); }
+.patient-cc, .patient-phone { color: var(--color-text-muted); font-size: 0.9rem; }
+
+.empty-state { text-align: center; color: var(--color-text-muted); font-style: italic; }
+
+@media (max-width: 500px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .patient-item { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+}
